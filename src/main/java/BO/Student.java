@@ -3,7 +3,7 @@ package BO;
 import java.util.Date;
 import javax.faces.bean.ManagedBean;
 
-@ManagedBean
+@ManagedBean(name ="studentParen")
 public class Student {
 	
 	private int id; 
@@ -15,11 +15,15 @@ public class Student {
 	private String note;
 //	private  Date date;
 	
+	public Student() {
+		
+	}
+	
 	public Student(int id,String nameStudent,int age,String village,int phone,String email,String note) {
 		this.id =id;
 		this.nameStudent =nameStudent;
 		this.age =age;
-		this.village =village;
+		this.setVillage(village);
 		this.phone =phone;
 		this.email =email;
 		this.note =note;
@@ -44,12 +48,7 @@ public class Student {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	public String getVillage() {
-		return village;
-	}
-	public void setVillaage(String village) {
-		this.village = village;
-	}
+
 	public int getPhone() {
 		return phone;
 	}
@@ -74,6 +73,14 @@ public class Student {
 //	public  void setDate(Date date) {r
 //		Student.date = date;
 //	}
+
+	public String getVillage() {
+		return village;
+	}
+
+	public void setVillage(String village) {
+		this.village = village;
+	}
 	
 	
 	

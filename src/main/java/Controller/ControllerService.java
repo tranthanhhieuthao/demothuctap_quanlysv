@@ -17,16 +17,19 @@ public class ControllerService implements Serializable {
 
 	private List<Student> lists;
 
-	private Student student;
+//	private Student student;
 
 	@ManagedProperty(value = "#{StudentService}")
 	private StudentService studentservice;
 
+	@ManagedProperty(value = "#{StudentParent}")
+	private Student student;
+
 	public ControllerService() {
 		lists = new ArrayList<Student>();
 		studentservice = new StudentService();
-		lists =studentservice.listStudent();
-		}
+		lists = studentservice.listStudent();
+	}
 
 	public List<Student> getLists() {
 		return lists;
@@ -54,12 +57,23 @@ public class ControllerService implements Serializable {
 
 	public String addStudent() {
 		lists.add(student);
-		return null;
+		return "ListStudent";
+
+	}
+
+	public Student findById(int id) {
+		Student studentFindById = new Student();
+		for (Student i : lists) {
+			if (id == i.getId())
+				studentFindById = i;
+		}
+		return studentFindById;
 	}
 
 	public String deleteStudent(int id) {
-		lists.remove(id);
-		return "ListStudent";
+		Student toRemove = findById(id);
+		lists.remove(toRemove);
+		return "null";
 
 	}
 

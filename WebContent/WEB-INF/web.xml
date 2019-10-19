@@ -3,6 +3,8 @@
   <display-name>Demo_QuanLySV</display-name>
   <welcome-file-list>
     <welcome-file>ListStudent.xhtml</welcome-file>
+    <welcome-file>AddStudent.xhtml</welcome-file>
+    <welcome-file>Error.xhtml</welcome-file>
   </welcome-file-list>
   <servlet-mapping>
     <servlet-name>Faces Servlet</servlet-name>

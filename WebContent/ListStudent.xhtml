@@ -9,7 +9,7 @@
 	xmlns:h="http://java.sun.com/jsf/html">
 <h:head>
 	<title>Quan ly Sinh Vien</title>
-<style>
+	<style>
 .employeeTable {
 	border-collapse: collapse;
 	border: 1px solid #000000;
@@ -34,8 +34,8 @@
 </style>
 </h:head>
 <h:body>
-
-<h:form>
+	<h3>List Student</h3>
+	<h:form>
 		<h:dataTable value="#{controller.lists}" var="list"
 			styleClass="employeeTable" headerClass="employeeTableHeader"
 			rowClasses="employeeTableOddRow,employeeTableEvenRow">
@@ -61,14 +61,30 @@
             </h:column>
 
 			<h:column>
-				<f:facet name="header">Delete</f:facet>
-				<h:commandButton value="Delete" action="#{controller.deleteStudent(list.id-1)}" />
+				<f:facet name="header">Phone</f:facet>
+               #{list.phone}
+            </h:column>
 
+			<h:column>
+				<f:facet name="header">Email</f:facet>
+               #{list.email}
+            </h:column>
+
+			<h:column>
+				<f:facet name="header">Note</f:facet>
+               #{list.note}
+            </h:column>
+
+			<h:column>
+				<f:facet name="header">Delete</f:facet>
+				<h:commandButton value="Delete"
+					action="#{controller.deleteStudent(list.id)}" />
 			</h:column>
 		</h:dataTable>
 
-		<h3>Add Employee</h3>
-		<hr />
+		<h:commandButton value="AddStudent"
+			action="AddStudent?faces-redirect=true" />
+
 
 
 	</h:form>
