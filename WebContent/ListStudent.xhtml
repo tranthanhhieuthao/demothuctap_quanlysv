@@ -80,6 +80,19 @@
 				<h:commandButton value="Delete"
 					action="#{controller.deleteStudent(list.id)}" />
 			</h:column>
+			
+			<h:column>
+				<f:facet name="header">Detail</f:facet>
+				<h:commandButton value="Detail"
+					action="#{controller.DetailStudent}" />
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">Edit</f:facet>
+				<h:commandButton value="Edit"
+					action="#{controller.EditStudent}" />
+			</h:column>
+			
 		</h:dataTable>
 
 		<h:commandButton value="AddStudent"

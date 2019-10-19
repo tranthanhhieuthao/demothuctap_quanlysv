@@ -55,6 +55,16 @@ public class ControllerService implements Serializable {
 		this.student = student;
 	}
 
+	public String DetailStudent() {
+
+		return "DetailStudent?faces-redirec=true";
+	}
+
+	public String EditStudent() {
+
+		return "EditStudent?faces-redirec=true";
+	}
+
 	public String addStudent() {
 		lists.add(student);
 		return "ListStudent";
