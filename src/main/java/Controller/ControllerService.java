@@ -24,13 +24,9 @@ public class ControllerService implements Serializable {
 
 	public ControllerService() {
 		lists = new ArrayList<Student>();
-		lists.add(new Student(1, "Hieu", 27, "Nghe An", 0374006604, "tranhieu@gmail.com", "khong co gi"));
-		lists.add(new Student(2, "Thao", 25, "Ha Noi", 0366565, "tranthao@gmail.com", "khong co gi"));
-		lists.add(new Student(3, "Chi", 25, "Nghe An", 0374006604, "tranchi@gmail.com", "khong co gi"));
-		lists.add(new Student(4, "Quang", 28, "Nghe An", 0374006604, "tranquang@gmail.com", "khong co gi"));
-		lists.add(new Student(5, "Hai", 29, "Nghe An", 0374006604, "nguyenhai@gmail.com", "khong co gi"));
-
-	}
+		studentservice = new StudentService();
+		lists =studentservice.listStudent();
+		}
 
 	public List<Student> getLists() {
 		return lists;
