@@ -11,6 +11,57 @@
 
 </h:head>
 <h:body>
-<h2>Day la detail</h2>
+	<h2>Detail Studen</h2>
+	<h:form>
+		<h:commandButton value="Back" action="ListStudent?faces-redirect=true" />
+	</h:form>
+	<hr />
+
+
+	<table>
+		<tr>
+			<td>ID: </td>
+			<td>#{controller.student.id}</td>
+		</tr>
+
+
+
+		<tr>
+			<td>Name: </td>
+			<td>#{controller.student.nameStudent}</td>
+		</tr>
+
+
+		<tr>
+			<td>Age: </td>
+			<td>#{controller.student.age}</td>
+		</tr>
+
+
+		<tr>
+			<td>Village: </td>
+			<td>#{controller.student.village}</td>
+		</tr>
+
+
+		<tr>
+			<td>Phone: </td>
+			<td>#{controller.student.phone}</td>
+		</tr>
+
+
+		<tr>
+			<td>Email: </td>
+			<td>#{controller.student.email}</td>
+		</tr>
+
+		<tr>
+			<td>Note: </td>
+			<td>#{controller.student.note}</td>
+		</tr>
+	</table>
+
+
+
 </h:body>
 </html>

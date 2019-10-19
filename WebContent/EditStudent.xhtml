@@ -11,6 +11,51 @@
 
 </h:head>
 <h:body>
-<h2>Day la Edit</h2>
+<h2>Edit Student</h2>
+<h:form>
+		<h:commandButton value="Back" action="ListStudent?faces-redirect=true" />
+	</h:form>
+	<hr />
+	
+	<h:form>
+		<table>
+
+			<tr>
+				<td>Name :</td>
+				<td><h:inputText size="10" value="#{controller.student.nameStudent}" /></td>
+			</tr>
+
+			<tr>
+				<td>Age :</td>
+				<td><h:inputText size="5" value="#{controller.student.age}" /></td>
+			</tr>
+
+			<tr>
+				<td>Village :</td>
+				<td><h:inputText size="5" value="#{controller.student.village}" /></td>
+			</tr>
+
+			<tr>
+				<td>Phone :</td>
+				<td><h:inputText size="5" value="#{controller.student.phone}" /></td>
+			</tr>
+
+			<tr>
+				<td>Email :</td>
+				<td><h:inputText size="5" value="#{controller.student.email}" /></td>
+			</tr>
+
+			<tr>
+				<td>Note :</td>
+				<td><h:inputText size="5" value="#{controller.student.note}" /></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td><h:commandButton value="Edit Student"
+						action="ListStudent?faces-redirect=true" /></td>
+			</tr>
+		</table>
+	</h:form>
 </h:body>
 </html>

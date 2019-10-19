@@ -84,19 +84,19 @@
 			<h:column>
 				<f:facet name="header">Detail</f:facet>
 				<h:commandButton value="Detail"
-					action="#{controller.DetailStudent}" />
+					action="#{controller.DetailStudent(list.id)}" />
 			</h:column>
 			
 			<h:column>
 				<f:facet name="header">Edit</f:facet>
 				<h:commandButton value="Edit"
-					action="#{controller.EditStudent}" />
+					action="#{controller.EditStudent(list.id)}" />
 			</h:column>
 			
 		</h:dataTable>
 
 		<h:commandButton value="AddStudent"
-			action="AddStudent?faces-redirect=true" />
+			action="#{controller.addStudent}" />
 
 
 
